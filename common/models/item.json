@@ -1,0 +1,35 @@
+{
+  "name": "item",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "code": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "size": {
+      "type": "string"
+    },
+    "cost": {
+      "type": "number"
+    },
+    "price": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

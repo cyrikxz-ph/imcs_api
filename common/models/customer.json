@@ -1,0 +1,42 @@
+{
+  "name": "customer",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "contact_no": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "yrs_in_business": {
+      "type": "number"
+    },
+    "line_of_business": {
+      "type": "string"
+    },
+    "product_lines": {
+      "type": "string"
+    },
+    "store_area": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

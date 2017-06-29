@@ -1,0 +1,24 @@
+{
+  "name": "payment_term",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "description": {
+      "type": "string"
+    },
+    "term_days": {
+      "type": "number"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

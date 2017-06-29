@@ -1,0 +1,27 @@
+{
+  "name": "unit",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "description": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "items": {
+      "type": "hasMany",
+      "model": "item",
+      "foreignKey": "unit_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
