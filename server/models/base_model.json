@@ -1,20 +1,20 @@
 {
-  "name": "category",
+  "name": "base_model",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
+  "hidden": [
+    "createdAt",
+    "updatedAt"
+  ],
   "properties": {
-    "description": {
-      "type": "string"
+    "createdAt": {
+      "type": "date"
     },
-    "parent_category_id": {
-      "type": "string"
-    },
-    "active": {
-      "type": "boolean",
-      "default": true
+    "updatedAt": {
+      "type": "date"
     }
   },
   "validations": [],

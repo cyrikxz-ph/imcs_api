@@ -20,12 +20,6 @@
     },
     "size": {
       "type": "string"
-    },
-    "cost": {
-      "type": "number"
-    },
-    "price": {
-      "type": "number"
     }
   },
   "validations": [],

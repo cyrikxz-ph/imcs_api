@@ -1,15 +1,15 @@
 {
-  "name": "unit",
+  "name": "item_group",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "unit_code": {
+    "group_code": {
       "type": "string"
     },
-    "unit_name": {
+    "group_name": {
       "type": "string"
     },
     "active": {

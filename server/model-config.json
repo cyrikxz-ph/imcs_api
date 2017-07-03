@@ -43,13 +43,33 @@
   },
   "invoice": {
     "dataSource": "mongodb",
+    "public": false
+  },
+  "item_category": {
+    "dataSource": "mongodb",
     "public": true
   },
-  "category": {
+  "item_group": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "item_brand": {
     "dataSource": "mongodb",
     "public": true
   },
   "item": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "product_attribute_type": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "product_attribute": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "product": {
     "dataSource": "mongodb",
     "public": true
   }

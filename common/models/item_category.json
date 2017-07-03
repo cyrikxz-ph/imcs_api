@@ -1,15 +1,18 @@
 {
-  "name": "unit",
+  "name": "item_category",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "unit_code": {
+    "category_code": {
       "type": "string"
     },
-    "unit_name": {
+    "category_name": {
+      "type": "string"
+    },
+    "parent_category_id": {
       "type": "string"
     },
     "active": {

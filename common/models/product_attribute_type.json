@@ -1,20 +1,13 @@
 {
-  "name": "unit",
+  "name": "product_attribute_type",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "unit_code": {
+    "attribute_name": {
       "type": "string"
-    },
-    "unit_name": {
-      "type": "string"
-    },
-    "active": {
-      "type": "boolean",
-      "default": true
     }
   },
   "validations": [],

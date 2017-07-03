@@ -1,0 +1,23 @@
+{
+  "name": "product_attribute",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "value": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "product_attribute_type": {
+      "type": "belongsTo",
+      "model": "product_attribute_type",
+      "foreignKey": "product_attribute_type_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -11,6 +11,7 @@
 *.tgz
 *.xml
 .DS_Store
+.vscode
 .idea
 .project
 .strong-pm
