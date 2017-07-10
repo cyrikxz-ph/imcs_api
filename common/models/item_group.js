@@ -1,6 +1,9 @@
 'use strict';
 
 module.exports = function(ItemGroup) {
+  //#########################################
+  //# Enable / Disable Default Model Routes #
+  //#########################################
   // ItemGroup.disableRemoteMethodByName('create');
   // ItemGroup.disableRemoteMethodByName('prototype.__count__accessTokens');
   // ItemGroup.disableRemoteMethodByName('prototype.__create__accessTokens');
@@ -14,10 +17,10 @@ module.exports = function(ItemGroup) {
   // ItemGroup.disableRemoteMethodByName('replaceById');
   // ItemGroup.disableRemoteMethodByName('deleteById');
   // ItemGroup.disableRemoteMethodByName('find');
+  // ItemGroup.disableRemoteMethodByName('findById');
   // ItemGroup.disableRemoteMethodByName('count');
   ItemGroup.disableRemoteMethodByName('upsert');
   ItemGroup.disableRemoteMethodByName('updateAll');
-  ItemGroup.disableRemoteMethodByName('findById');
   ItemGroup.disableRemoteMethodByName('findOne');
   ItemGroup.disableRemoteMethodByName('confirm');
   ItemGroup.disableRemoteMethodByName('exists');
@@ -25,4 +28,10 @@ module.exports = function(ItemGroup) {
   ItemGroup.disableRemoteMethodByName('createChangeStream');
   ItemGroup.disableRemoteMethodByName('replaceOrCreate');
   ItemGroup.disableRemoteMethodByName('upsertWithWhere');
+
+  //######################
+  //#  Model Validation  #
+  //######################
+  ItemGroup.validatesPresenceOf('group_code', 'group_name');
+  ItemGroup.validatesUniquenessOf('group_code', {message: 'brand code must be unique'});
 };

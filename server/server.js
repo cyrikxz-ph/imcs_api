@@ -2,6 +2,7 @@
 
 var loopback = require('loopback');
 var boot = require('loopback-boot');
+var logger = require('loopback-component-logger')();
 
 var app = module.exports = loopback();
 

@@ -1,6 +1,9 @@
 'use strict';
 
 module.exports = function(Unit) {
+  //#########################################
+  //# Enable / Disable Default Model Routes #
+  //#########################################
   // Unit.disableRemoteMethodByName('create');
   // Unit.disableRemoteMethodByName('prototype.__count__accessTokens');
   // Unit.disableRemoteMethodByName('prototype.__create__accessTokens');
@@ -25,4 +28,10 @@ module.exports = function(Unit) {
   Unit.disableRemoteMethodByName('createChangeStream');
   Unit.disableRemoteMethodByName('replaceOrCreate');
   Unit.disableRemoteMethodByName('upsertWithWhere');
+  
+  //######################
+  //#  Model Validation  #
+  //######################
+  Unit.validatesPresenceOf('unit_code', 'unit_name');
+  Unit.validatesUniquenessOf('unit_code', {message: 'code must be unique'});
 };

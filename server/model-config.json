@@ -13,6 +13,52 @@
       "./mixins"
     ]
   },
+  "AccessToken": {
+    "dataSource": "mongodb",
+    "public": false,
+    "relations": {
+      "user": {
+        "type": "belongsTo",
+        "model": "user",
+        "foreignKey": "userId"
+      }
+    }
+  },
+  "user": {
+    "dataSource": "mongodb",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": false,
+          "login": true,
+          "logout": true,
+          "find": true,
+          "resetPassword": true,
+          "setPassword": true,
+          "changePassword": true
+        }
+      }
+    }
+  },
+  "Role": {
+    "dataSource": "mongodb",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "RoleMapping": {
+    "dataSource": "mongodb",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "ACL": {
+    "dataSource": "mongodb",
+    "public": false
+  },
   "unit": {
     "dataSource": "mongodb",
     "public": true
@@ -22,10 +68,6 @@
     "public": true
   },
   "currency": {
-    "dataSource": "mongodb",
-    "public": true
-  },
-  "location": {
     "dataSource": "mongodb",
     "public": true
   },
@@ -56,10 +98,6 @@
   "item_brand": {
     "dataSource": "mongodb",
     "public": true
-  },
-  "item": {
-    "dataSource": "mongodb",
-    "public": false
   },
   "product_attribute_type": {
     "dataSource": "mongodb",

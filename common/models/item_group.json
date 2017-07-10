@@ -7,10 +7,13 @@
   },
   "properties": {
     "group_code": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "index": true
     },
     "group_name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "active": {
       "type": "boolean",
@@ -19,6 +22,19 @@
   },
   "validations": [],
   "relations": {},
-  "acls": [],
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
   "methods": {}
 }
